@@ -10,10 +10,10 @@
 
 ## 带小数点的数
     
-    double
+     double
     
-    printf("%f",...)
+     printf("%f",...)
     
-    scanf("$lf",...)
+     scanf("$lf",...)
     
   
