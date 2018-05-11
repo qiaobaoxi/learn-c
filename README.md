@@ -92,6 +92,27 @@
     
     要把一个数组的所有元素交割另一个数组，必须采用遍历
     
-###搜索内容
+###搜索内容(json)
+     struct {
+       int amount;
+       char *name;
+     } coins[]={
+       {1,"penny"},
+       {5,"nickel"},
+       {10,"dime"},
+       {25,"quarter"},
+       {50,"half-dollar"}
+     }
+    int search(){
+      
     
-    
+    }
+    int main(){
+      int k=13;
+      int i;
+      for(i=0;i<sizeof(coins)/sizeof(coins[0]);i++){
+        if(k==coins[i].amount){
+          printf("%s\n",coins[i].name);
+        }
+      }
+    }
