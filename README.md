@@ -254,3 +254,83 @@
      
      printf("%s",string);
      
+### 安全的输入
+
+    char string[8];
+    
+    scanf("%7s",string);
+    
+    在%和s之间的数字表示最多允许读入的字符的数量，这个数字应该比数组的大小小一
+    
+    下一次scanf从哪里开始
+    
+### string.h
+
+     strlen
+     
+         size_t strlen(const char *s);
+         
+         返回s的字符串长度（不包括结尾的0);
+         
+
+     strcmp
+         
+         int strcmp(const char *s1,const char *s2);
+         
+         比较两个字符串，返回
+         
+         0：s1==s2 
+         
+         1：s1>s2 
+         
+         -1 ：s1<s2 
+     
+     strcpy
+         
+         char* strcpy(char * restrict dst,const char *restrictsrc)
+         
+         把 src的字符串拷贝到dst
+         
+         restrict表明src和dst不重叠
+         
+         返回dst
+           
+           为了能连接代码来
+     
+     strcat
+         
+         char * strcat(char * restrict s1,const char *restricts2);
+         
+         把s2拷贝到s1的后面，接成一个长的字符串
+         
+         返回s1
+         
+         s1必须具有足够的空间
+     
+     strchr
+         
+         
+     
+     strstr
+     
+  ### 安全问题
+  
+      strcpy和strcat都可能出现安全问题
+      
+      如果目的地没有足够的空间
+      
+ ### 安全版本
+ 
+     char* strncpy(char * restrict dst,const char * restrictsrc,size_t n)
+     
+     char* strncat(char * restrict dst,const char * restrictsrc,size_t n)
+     
+     int strncmp(char * restrict dst,const char * restrictsrc,size_t n)
+     
+ ### 字符串中找字符
+     
+     char*strchr（const char *s，int c);
+     
+     char*strrchr（const char *s，int c);
+     
+     返回NULL表示没有找到
